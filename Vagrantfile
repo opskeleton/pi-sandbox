@@ -4,8 +4,6 @@ Vagrant.configure("2") do |config|
 
   bridge = ENV['VAGRANT_BRIDGE']
   bridge ||= 'eth0'
-  env  = ENV['PUPPET_ENV']
-  env ||= 'dev'
 
   config.vm.box = 'Debian-7.4.0-amd64' 
   config.vm.network :public_network, :bridge => bridge
@@ -18,7 +16,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = 'manifests'
     puppet.manifest_file  = 'default.pp'
-    puppet.options = '--modulepath=/vagrant/modules:/vagrant/static-modules --hiera_config /vagrant/hiera_vagrant.yaml --environment=#{env}'
+    puppet.options = '--modulepath=/vagrant/modules:/vagrant/static-modules --hiera_config /vagrant/hiera_vagrant.yaml --environment=dev'
 
   end
 
