@@ -1,4 +1,4 @@
-# tty managment
+# tty disabling
 class pie::tty {
 
   exec{'remove extra ttys':
