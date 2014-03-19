@@ -1,4 +1,5 @@
 # A raspberry pie module
 class pie {
-  include pie::slimdown
+  include pie::ssh
+  include pie::tty
 }
