@@ -18,15 +18,16 @@ class pie::ssh {
     command => "sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=2222/g' /etc/default/dropbear",
     user    => 'root',
     path    => '/bin',
-  } ->
-
-  service{'dropbear':
-    ensure    => running,
-    enable    => true,
-    hasstatus => true,
   }
 
   if($environment != 'dev'){
+    service{'dropbear':
+      ensure    => running,
+      enable    => true,
+      hasstatus => true,
+      require   => Exec['set port 2222']
+    }
+
     package{'raspi-config':
       ensure  => present
     }
