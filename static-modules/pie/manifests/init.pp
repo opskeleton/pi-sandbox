@@ -2,4 +2,5 @@
 class pie {
   include pie::ssh
   include pie::tty
+  include pie::shell
 }
