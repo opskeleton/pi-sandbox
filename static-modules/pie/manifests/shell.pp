@@ -7,6 +7,6 @@ class pie::shell {
   exec{'dpkg-conf dash':
     command => 'dpkg-reconfigure -p critical dash',
     user    => 'root',
-    path    => '/usr/sbin'
+    path    => ['/usr/sbin', '/usr/bin']
   }
 }
