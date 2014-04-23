@@ -4,4 +4,5 @@ class pie {
   include pie::tty
   include pie::shell
   include pie::swap
+  include pie::mpsyt
 }

@@ -8,9 +8,17 @@ GIT
   ref: master
   sha: 884efdc0997af667f24625e696630e6b1db5a952
   specs:
-    editfile (0.0.1)
+    mstrauss/editfile (0.0.1)
+
+GIT
+  remote: git://github.com/stankevich/puppet-python.git
+  ref: master
+  sha: 327351578a151bf9cf30f746075bb653b77ba57c
+  specs:
+    stankevich/python (1.7.2)
 
 DEPENDENCIES
-  editfile (>= 0)
+  mstrauss/editfile (>= 0)
   puppetlabs/stdlib (>= 0)
+  stankevich/python (>= 0)
 
