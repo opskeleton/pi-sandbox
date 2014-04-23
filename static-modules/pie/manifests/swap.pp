@@ -4,6 +4,9 @@ class pie::swap {
     ensure  => present
   } ->
 
+  file{'/etc/dphys-swapfile':
+    ensure  => present
+  }
   file_line { 'swapsize':
     path => '/etc/dphys-swapfile',
     line => 'CONF_SWAPSIZE=512'
