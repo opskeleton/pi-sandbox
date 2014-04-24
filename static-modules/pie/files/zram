@@ -1,0 +1,49 @@
+#!/bin/bash
+### BEGIN INIT INFO
+#Provides: zram
+#Required-Start:
+#Required-Stop:
+#Default-Start: 2 3 4 5
+#Default-Stop: 0 1 6
+#Short-Description: Increased Performance In Linux With zRam (Virtual Swap Compressed in RAM)
+#Description: Adapted for Raspian (Rasberry pi) by eXtremeSHOK.com using https://raw.github.com/gionn/etc/master/init.d/zram
+### END INIT INFO
+
+start() {
+    mem_total_kb=$(grep MemTotal /proc/meminfo | grep -E --only-matching '[[:digit:]]+')
+
+    modprobe zram
+
+    sleep 1
+    #only using 50% of system memory, comment the line below to use 100% of system memory
+    mem_total_kb=$((mem_total_kb/2))
+
+    echo $((mem_total_kb * 1024)) > /sys/block/zram0/disksize
+
+    mkswap /dev/zram0
+
+    swapon -p 100 /dev/zram0
+}
+
+stop() {
+    swapoff /dev/zram0
+    sleep 1
+    rmmod zram
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    restart)
+        stop
+        sleep 3
+        start
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart}"
+        RETVAL=1
+esac
