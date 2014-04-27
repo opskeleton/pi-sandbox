@@ -6,4 +6,5 @@ class pie {
   include pie::swap
   # include pie::mpsyt
   include pie::zram
+  include ipv6
 }
