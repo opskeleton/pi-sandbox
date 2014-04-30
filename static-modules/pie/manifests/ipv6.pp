@@ -10,6 +10,10 @@ class pie::ipv6 {
     line => 'net.ipv6.conf.all.disable_ipv6=1'
   }
 
+  file{'/etc/modprobe.d/blacklist':
+    ensure => file
+  } ->
+
   file_line { 'disable ipv6 module':
     path => '/etc/modprobe.d/blacklist',
     line => 'blacklist ipv6'
