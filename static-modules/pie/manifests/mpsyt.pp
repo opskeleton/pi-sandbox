@@ -14,7 +14,7 @@ class pie::mpsyt {
     distribute   => false,
     cwd          => '',
     timeout      => 0,
-  }
+  } ->
 
   python::pip { 'mps-youtube':
     pkgname      => 'mps-youtube',
