@@ -1,4 +1,3 @@
-# trims down fat to make pie run fast/leaner based upon http://bit.ly/1cAd6Id
 class pie::ssh {
   package{['curl', 'ntp', 'ntpdate', 'ca-certificates', 'binutils']:
     ensure  => present
