@@ -4,6 +4,11 @@ then
   sudo apt-get install git ruby1.9.1 ruby1.9.1-dev rubygems -y
 fi
 
+if [ -f /etc/debian_version ]; then
+  group add puppet
+  sudo apt-get install git ruby1.9.1 ruby1.9.1-dev rubygems -y
+fi
+
 if cat /proc/version | grep Red
 then
   groupadd puppet
