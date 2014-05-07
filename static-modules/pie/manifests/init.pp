@@ -8,11 +8,11 @@ class pie {
   include pie::swap
   include pie::mpsyt
   include pie::zram
-  include ipv6
+  include pie::ipv6
 
   exec{'noop scheduler':
-    command => "sed -i 's/deadline/noop/g' /boot/cmdline.txt",
+    command => "/bin/sed -i 's/deadline/noop/g' /boot/cmdline.txt",
     user    => 'root',
-    path    => ['/usr/bin','/bin',]
+    onlyif => '/usr/bin/test -f /boot/cmdline.txt'
   }
 }
