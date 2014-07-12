@@ -7,12 +7,17 @@ class pie {
   include pie::shell
   include pie::swap
   include pie::mpsyt
-  include pie::zram
+  include pie::bootlog
+  # include pie::zram
   include pie::ipv6
 
   exec{'noop scheduler':
     command => "/bin/sed -i 's/deadline/noop/g' /boot/cmdline.txt",
     user    => 'root',
     onlyif => '/usr/bin/test -f /boot/cmdline.txt'
+  }
+
+  package{'mlocate':
+    ensure  => present
   }
 }
