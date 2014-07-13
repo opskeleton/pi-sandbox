@@ -2,21 +2,29 @@
 auto lo
 iface lo inet loopback
 
-# the internal (wired) network interface
-auto eth0
- iface eth0 inet static
- address <%=@eth0_address%>
- netmask 255.255.255.0
- gateway <%=@wlan_gateway%>
-
-
 allow-hotplug wlan0
-iface wlan0 inet manual 
+iface wlan0 inet manual
 wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
 iface default inet dhcp
 
-post-up /sbin/iptables -A FORWARD -o wlan0 -i eth0 -s <%=@eth0_subnet%> -m conntrack --ctstate NEW -j ACCEPT
+
+# the internal (wired) network interface
+auto eth0
+ iface eth0 inet static
+ address <%=@address%>
+ netmask 255.255.255.0
+ broadcast <%=@broadcast%>
+
+
+post-up /sbin/iptables -F
+post-up /sbin/iptables -X
+post-up /sbin/iptables -t nat -F
+
+post-up /sbin/iptables -A FORWARD -o wlan0 -i eth0 -s <%=@subnet%> -m conntrack --ctstate NEW -j ACCEPT
 post-up /sbin/iptables -A FORWARD -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 post-up /sbin/iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
 post-up /sbin/sysctl -w net.ipv4.ip_forward=1
-post-up /usr/sbin/dnsmasq -i eth0 -I wlan0 -F <%=@dhcp_range%>,infinite 
+
+post-up /etc/init.d/dnsmasq restart
+~
+~

@@ -1,0 +1,8 @@
+# dhcp active for eth0
+interface=eth0
+
+# no dhcp for wlan0
+no-dhcp-interface=wlan0
+
+# range / Lease-Time
+dhcp-range=interface:eth0,<%=@dhcp_range%>,infinite
