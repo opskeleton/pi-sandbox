@@ -13,11 +13,14 @@ class pie::ssh {
     path    => ['/bin']
   } ->
 
-  exec{'set port 2222':
-    command => "sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=2222/g' /etc/default/dropbear",
-    user    => 'root',
-    path    => '/bin',
+  editfile::config { 'dropbear port':
+    ensure => '2222',
+    path   => '/etc/default/dropbear',
+    quote  => false,
+    sep    => '=',
+    entry  => 'DROPBEAR_PORT',
   }
+
 
   if($environment != 'dev'){
     service{'dropbear':
