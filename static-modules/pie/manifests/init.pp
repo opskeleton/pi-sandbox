@@ -3,6 +3,7 @@
 # based upon http://bit.ly/1cAd6Id
 class pie {
   include pie::ssh
+  # include pie::gateway
   include pie::tty
   include pie::shell
   include pie::swap
@@ -14,7 +15,7 @@ class pie {
   exec{'noop scheduler':
     command => "/bin/sed -i 's/deadline/noop/g' /boot/cmdline.txt",
     user    => 'root',
-    onlyif => '/usr/bin/test -f /boot/cmdline.txt'
+    onlyif  => '/usr/bin/test -f /boot/cmdline.txt'
   }
 
   package{'mlocate':
