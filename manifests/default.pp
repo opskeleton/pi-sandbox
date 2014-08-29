@@ -1,5 +1,5 @@
 group{ 'puppet': ensure  => present }
 
-node 'pi.local' {
+node default {
   include pi
 }
