@@ -3,6 +3,10 @@ class pi::wlan(
   $ssid='',
   $psk=''
 ){
+  package{'wpasupplicant':
+    ensure  => present
+  } ->
+  
   file { '/etc/network/interfaces':
     ensure=> file,
     mode  => '0644',
@@ -14,7 +18,7 @@ class pi::wlan(
   file { '/etc/wpa_supplicant/wpa_supplicant.conf':
     ensure=> file,
     mode  => '0644',
-    content => template('wpa_supplicant.conf.erb'),
+    content => template('pi/wpa_supplicant.conf.erb'),
     owner => root,
     group => root,
   } ~>

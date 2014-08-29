@@ -3,6 +3,7 @@
 # based upon http://bit.ly/1cAd6Id
 class pi {
   include pi::ssh
+  include pi::wlan
   # include pi::gateway
   include pi::tty
   include pi::shell
