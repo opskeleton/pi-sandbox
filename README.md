@@ -4,9 +4,7 @@ A raspberry pie sandbox
 
 # Usage
 ```bash
-  $ bundle install 
-  $ librarian-puppet install 
-  $ vagrant up
+  $ ./boot
 ```
 
 # Copyright and license
