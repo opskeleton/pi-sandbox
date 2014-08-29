@@ -1,7 +1,7 @@
 # A raspberry pie module
 # trims down fat to make pie run fast/leaner
 # based upon http://bit.ly/1cAd6Id
-class pie {
+class pi {
   include pie::ssh
   # include pie::gateway
   include pie::tty

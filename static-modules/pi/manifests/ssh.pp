@@ -1,4 +1,4 @@
-class pie::ssh {
+class pi::ssh {
   package{['curl', 'ntp', 'ntpdate', 'ca-certificates', 'binutils']:
     ensure  => present
   }

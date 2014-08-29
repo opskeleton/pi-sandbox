@@ -1,5 +1,5 @@
 # enabling dash
-class pie::shell {
+class pi::shell {
   package{'dash':
     ensure  => present
   } ->

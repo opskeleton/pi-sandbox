@@ -1,5 +1,5 @@
 # Swap enabling and settings
-class pie::swap {
+class pi::swap {
   package{'dphys-swapfile':
     ensure  => present
   } ->

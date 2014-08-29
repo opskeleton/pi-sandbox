@@ -1,7 +1,7 @@
 # making eth0 to wlan0 brigding see:
 # 1.http://bit.ly/1mWquA5
 # 2. http://bit.ly/1jpunN6
-class pie::gateway(
+class pi::gateway(
   $address='192.168.5.1',
   $broadcast='192.168.5.255',
   $subnet='192.168.5.0/24',

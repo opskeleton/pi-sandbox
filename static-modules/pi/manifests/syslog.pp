@@ -1,5 +1,5 @@
 # Leaner sysloging
-class pie::syslog {
+class pi::syslog {
   package{'rsyslog':
     ensure  => absent
   }

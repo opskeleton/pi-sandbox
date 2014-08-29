@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.box = 'Debian-7.4.0-amd64' 
   config.vm.network :public_network, :bridge => bridge
-  config.vm.hostname = 'pie.local'
+  config.vm.hostname = 'pi.local'
 
   config.vm.provider :virtualbox do |vb|
     vb.customize ['modifyvm', :id, '--memory', 2048, '--cpus', 2]

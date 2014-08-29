@@ -1,5 +1,5 @@
 # Setting up wlan
-class pie::wlan(
+class pi::wlan(
   $ssid='',
   $psk=''
 ){

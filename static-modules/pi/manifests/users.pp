@@ -1,5 +1,5 @@
 # clearing pi user and adding specified user
-class pie::users($user = undef){
+class pi::users($user = undef){
   user{'pi':
     ensure     => absent,
     managehome => true,

@@ -1,5 +1,5 @@
 # Setting up https://github.com/np1/mps-youtube/blob/master/mpsyt
-class pie::mpsyt {
+class pi::mpsyt {
   class { 'python':
     version    => 'system',
     dev        => false,

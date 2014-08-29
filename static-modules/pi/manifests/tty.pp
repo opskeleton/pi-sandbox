@@ -1,5 +1,5 @@
 # tty disabling
-class pie::tty {
+class pi::tty {
 
   exec{'remove extra ttys':
     command => "sed -i '/[2-6]:23:respawn:\\/sbin\\/getty 38400 tty[2-6]/s%^%#%g' /etc/inittab",

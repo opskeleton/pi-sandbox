@@ -1,5 +1,5 @@
 # disable ipv6
-class pie::ipv6 {
+class pi::ipv6 {
 
   file{'/etc/sysctl.d/disableipv6.conf':
     ensure => present

@@ -1,5 +1,5 @@
 # setting up bootlogd
-class pie::bootlog {
+class pi::bootlog {
 
   package{'bootlogd':
     ensure  => present
@@ -13,5 +13,4 @@ class pie::bootlog {
     path => '/etc/default/bootlogd',
     line => 'BOOTLOGD_ENABLE=yes'
   }
-  
 }
