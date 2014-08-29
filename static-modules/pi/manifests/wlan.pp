@@ -6,7 +6,7 @@ class pi::wlan(
   file { '/etc/network/interfaces':
     ensure=> file,
     mode  => '0644',
-    source=> 'puppet:///modules/pie/interfaces',
+    source=> 'puppet:///modules/pi/interfaces',
     owner => root,
     group => root,
   } ->

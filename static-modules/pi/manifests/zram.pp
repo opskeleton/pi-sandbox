@@ -3,7 +3,7 @@ class pi::zram {
   file { '/etc/init.d/zram':
     ensure=> file,
     mode  => 'a+x',
-    source=> 'puppet:///modules/pie/zram',
+    source=> 'puppet:///modules/pi/zram',
     owner => root,
     group => root,
   } ->

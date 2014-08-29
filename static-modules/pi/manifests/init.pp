@@ -1,9 +1,9 @@
-# A raspberry pie module
-# trims down fat to make pie run fast/leaner
+# A raspberry pi module
+# trims down fat to make pi run fast/leaner
 # based upon http://bit.ly/1cAd6Id
 class pi {
   include pi::ssh
-  # include pie::gateway
+  # include pi::gateway
   include pi::tty
   include pi::shell
   include pi::swap

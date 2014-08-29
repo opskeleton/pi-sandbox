@@ -11,7 +11,7 @@ class pi::gateway(
   file { '/etc/network/interfaces':
     ensure  => file,
     mode    => '0644',
-    content => template('pie/interfaces.erb'),
+    content => template('pi/interfaces.erb'),
     owner   => root,
     group   => root,
   } ~>
@@ -29,7 +29,7 @@ class pi::gateway(
   file { '/etc/dnsmasq.conf':
     ensure  => file,
     mode    => '0644',
-    content => template('pie/dnsmasq.conf.erb'),
+    content => template('pi/dnsmasq.conf.erb'),
     owner   => root,
     group   => root,
   } ~>
