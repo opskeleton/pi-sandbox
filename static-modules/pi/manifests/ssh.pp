@@ -27,7 +27,7 @@ class pi::ssh {
       ensure    => running,
       enable    => true,
       hasstatus => true,
-      require   => Editfile::Config['set port 2222']
+      require   => Editfile::Config['dropbear port']
     }
 
     package{'raspi-config':
