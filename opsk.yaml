@@ -3,8 +3,10 @@
   name: pi
   includes: 
     - Puppetfile
+    - manifests
     - modules
     - static-modules
+    - hieradata
     - Gemfile
     - Gemfile.lock
     - opsk.yaml
