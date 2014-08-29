@@ -2,15 +2,15 @@
 # trims down fat to make pie run fast/leaner
 # based upon http://bit.ly/1cAd6Id
 class pi {
-  include pie::ssh
+  include pi::ssh
   # include pie::gateway
-  include pie::tty
-  include pie::shell
-  include pie::swap
-  include pie::mpsyt
-  include pie::bootlog
-  # include pie::zram
-  include pie::ipv6
+  include pi::tty
+  include pi::shell
+  include pi::swap
+  include pi::mpsyt
+  include pi::bootlog
+  # include pi::zram
+  include pi::ipv6
 
   exec{'noop scheduler':
     command => "/bin/sed -i 's/deadline/noop/g' /boot/cmdline.txt",

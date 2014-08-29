@@ -1,4 +1,4 @@
-name    'puppet-pie'
+name    'narkisr-pi'
 version '0.1.0'
 source 'UNKNOWN'
 author 'puppet'

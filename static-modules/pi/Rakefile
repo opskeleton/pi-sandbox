@@ -3,8 +3,8 @@ require 'rake'
 require 'rspec/core/rake_task'
 require 'puppet-lint/tasks/puppet-lint'
 
-link = 'spec/fixtures/modules/pie/manifests'
-target = 'spec/fixtures/modules/pie/'
+link = 'spec/fixtures/modules/pi/manifests'
+target = 'spec/fixtures/modules/pi/'
 
 task :link do
   FileUtils.mkdir_p target
