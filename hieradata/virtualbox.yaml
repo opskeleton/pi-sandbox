@@ -1,3 +1,6 @@
 ---
 pi::wlan::ssid: 'foo'
 pi::wlan::psk: '1234'
+
+pi::duckdns::token: '1234'
+pi::duckdns::domain: 'foo.com'

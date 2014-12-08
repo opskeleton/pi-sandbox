@@ -3,14 +3,15 @@
 # based upon http://bit.ly/1cAd6Id
 class pi {
   include pi::ssh
+  include pi::duckdns
   include pi::wlan
-  # include pi::gateway
   include pi::tty
   include pi::shell
   include pi::swap
   include pi::mpsyt
   include pi::bootlog
   # include pi::zram
+  # include pi::gateway
   include pi::ipv6
 
   exec{'noop scheduler':
