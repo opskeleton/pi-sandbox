@@ -11,6 +11,13 @@ GIT
     mstrauss-editfile (0.0.1)
 
 GIT
+  remote: git://github.com/pulling-strings/puppet-pi.git
+  ref: master
+  sha: 39ee73143abd81df74753159a03733e955641eb9
+  specs:
+    strings-pi (0.1.0)
+
+GIT
   remote: git://github.com/stankevich/puppet-python.git
   ref: master
   sha: f32fba19c241394a7963c71c55c3af4e2c0563f2
@@ -22,4 +29,5 @@ DEPENDENCIES
   mstrauss-editfile (>= 0)
   puppetlabs-stdlib (>= 0)
   stankevich-python (>= 0)
+  strings-pi (>= 0)
 

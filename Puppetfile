@@ -7,3 +7,6 @@ mod 'mstrauss/editfile',
 
 mod 'stankevich/python',
    :git => 'git://github.com/stankevich/puppet-python.git'
+
+mod 'strings/pi', 
+   :git => 'git://github.com/pulling-strings/puppet-pi.git'
