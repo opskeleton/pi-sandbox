@@ -3,3 +3,4 @@ modules
 .librarian
 .tmp
 pkg
+hieradata/physical.yaml
