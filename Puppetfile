@@ -10,3 +10,6 @@ mod 'stankevich/python',
 
 mod 'strings/pi', 
    :git => 'git://github.com/pulling-strings/puppet-pi.git'
+
+mod 'strings/baseline', 
+   :git => 'git://github.com/pulling-strings/puppet-baseline.git'
