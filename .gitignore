@@ -4,3 +4,4 @@ modules
 .tmp
 pkg
 hieradata/physical.yaml
+hieradata-prod

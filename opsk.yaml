@@ -1,13 +1,12 @@
 --- 
-  version: '0.0.3'
+  version: '0.1.0'
   name: pi
   includes: 
     - Puppetfile
     - manifests
     - modules
-    - hieradata
+    - hieradata-prod
     - hiera.yaml
-    - hieradata/physical.yaml
     - Gemfile
     - Gemfile.lock
     - opsk.yaml
