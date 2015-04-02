@@ -5,6 +5,5 @@
 :hierarchy:  
  - '%{::virtual}'
  - '%{::hostname}'
- - common
 :yaml:
-   :datadir: /vagrant/hieradata-%{::environment}
+   :datadir: hieradata-%{::environment}
