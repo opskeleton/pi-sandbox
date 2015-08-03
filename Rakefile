@@ -46,13 +46,13 @@ class ServerspecTask < RSpec::Core::RakeTask
 end
 
 namespace :serverspec do
-
-  %w(tiny).each do |profile|
+  Dir['manifests/*'].map{|it| it.match(/manifests\/(\w*).pp/)[1]}.each do |profile|
     ServerspecTask.new(profile.to_sym) do |t|
-      t.target = profile
+      t.target = profile 
       t.pattern = "spec/#{profile}/*_spec.rb"
     end
   end
 end
+
 
 task :default => 'serverspec:tiny'
