@@ -47,7 +47,7 @@ end
 
 namespace :serverspec do
 
-  %w(pi).each do |profile|
+  %w(tiny).each do |profile|
     ServerspecTask.new(profile.to_sym) do |t|
       t.target = profile
       t.pattern = "spec/#{profile}/*_spec.rb"
@@ -55,4 +55,4 @@ namespace :serverspec do
   end
 end
 
-task :default => 'serverspec:minimal'
+task :default => 'serverspec:tiny'
