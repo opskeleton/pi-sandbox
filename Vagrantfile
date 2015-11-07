@@ -11,24 +11,25 @@ SCRIPT
 
 Vagrant.configure("2") do |config|
 
-  bridge = ENV['VAGRANT_BRIDGE']
-  bridge ||= 'eth0'
+  device = ENV['VAGRANT_BRIDGE'] || 'eth0'
 
   Dir['manifests/*'].map{|it| it.match(/manifests\/(\w*).pp/)[1]}.each do |type|
     config.vm.define type.to_sym do |node| 
-	node.vm.box = 'ubuntu-15.04_puppet-3.7.5'
+	node.vm.box = 'Debian-7.4.0-amd64'
 	node.vm.hostname = "#{type}.local"
-	node.vm.network :public_network, :bridge => bridge
+	node.vm.network :public_network, :bridge => device, :dev => device
 
 	node.vm.provider :virtualbox do |vb|
 	  vb.customize ['modifyvm', :id, '--memory', 2048, '--cpus', 4]
 	end
 
-	node.vm.provider :libvirt do |domain|
+	node.vm.provider :libvirt do |domain, o|
 	  domain.uri = 'qemu+unix:///system'
 	  domain.host = "#{type}.local"
 	  domain.memory = 2048
 	  domain.cpus = 2
+	  domain.storage_pool_name = 'daemon'
+	  o.vm.synced_folder './', '/vagrant', type: 'nfs'
 	end
 
 	node.vm.provision :shell, :inline => update
