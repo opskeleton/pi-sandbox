@@ -1,8 +1,8 @@
 FORGE
   remote: https://forgeapi.puppetlabs.com
   specs:
-    puppetlabs-stdlib (4.7.0)
-    stahnma-epel (1.0.2)
+    puppetlabs-stdlib (4.9.0)
+    stahnma-epel (1.1.1)
 
 GIT
   remote: git://github.com/mstrauss/puppet-editfile.git
@@ -14,7 +14,7 @@ GIT
 GIT
   remote: git://github.com/pulling-strings/puppet-baseline.git
   ref: master
-  sha: 592feba56fc3587c3a67797b80d8bd2f76c7b618
+  sha: 7c288a9f647fda130fc885f0f55dd68d7d7750e9
   specs:
     strings-baseline (0.0.1)
 
@@ -28,10 +28,10 @@ GIT
 GIT
   remote: git://github.com/stankevich/puppet-python.git
   ref: master
-  sha: 900249863cb1e184060f65984f262449929123ba
+  sha: e7389f6e270796372b93b178fd5295abefbdc17a
   specs:
-    stankevich-python (1.9.6)
-      puppetlabs-stdlib (< 6.0.0, >= 4.0.0)
+    stankevich-python (1.10.0)
+      puppetlabs-stdlib (< 6.0.0, >= 4.6.0)
       stahnma-epel (< 2.0.0, >= 1.0.1)
 
 DEPENDENCIES
