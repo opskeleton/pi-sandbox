@@ -3,6 +3,7 @@
  - yaml
 :logger: console
 :hierarchy:  
+ - common
  - '%{::virtual}'
  - '%{::hostname}'
 :yaml:

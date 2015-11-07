@@ -1,1 +1,12 @@
 ---
+pi::wlan::ssid: 'foo'
+pi::wlan::psk: '1234'
+
+pi::duckdns::token: '1234'
+pi::duckdns::domain: 'foo.com'
+baseline::ssh::keys:
+  upgrade:
+    - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5BsjhACNz35yfz2Mxb23+YZLDPpQnjFvi7kXbjc5oNq3He9W2/uQfmdnwxYiSDMxk2LmRqoboIv4CyTDFPDSXDSqUpXh5SxTKQazbu8qEuudM9xAgSt3Q9DLvJj/KU6V5i/y8mnpDbrLa6DlM1bC6FAvK8PtbOPlMRrtjYYGJ/SS/oRzij0UTuBpJfz7+qsHrRNdJ3yU52wqwZuj8SparlKwpPCrcYFJ14LviULoAOKoTBaEsa23iMcQlLL7Eyf5AVStglFZWaKfs+7arQKgoJnSHHOY9osZDA6WyW81SFvqw5l/O9TwijDBKdMuo5Cz53Ci64wc5eNw4orxt4s7n ronen@nucleus
+  celestial:
+    - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5BsjhACNz35yfz2Mxb23+YZLDPpQnjFvi7kXbjc5oNq3He9W2/uQfmdnwxYiSDMxk2LmRqoboIv4CyTDFPDSXDSqUpXh5SxTKQazbu8qEuudM9xAgSt3Q9DLvJj/KU6V5i/y8mnpDbrLa6DlM1bC6FAvK8PtbOPlMRrtjYYGJ/SS/oRzij0UTuBpJfz7+qsHrRNdJ3yU52wqwZuj8SparlKwpPCrcYFJ14LviULoAOKoTBaEsa23iMcQlLL7Eyf5AVStglFZWaKfs+7arQKgoJnSHHOY9osZDA6WyW81SFvqw5l/O9TwijDBKdMuo5Cz53Ci64wc5eNw4orxt4s7n ronen@nucleus
+
