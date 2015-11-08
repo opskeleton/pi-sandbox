@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
 	node.vm.network :public_network, :bridge => device, :dev => device
 
 	node.vm.provider :virtualbox do |vb|
-	  vb.customize ['modifyvm', :id, '--memory', 2048, '--cpus', 4]
+	  vb.customize ['modifyvm', :id, '--memory', 2048, '--cpus', 2]
 	end
 
 	node.vm.provider :libvirt do |domain, o|
