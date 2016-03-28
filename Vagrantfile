@@ -9,13 +9,15 @@ if [ ! -f /tmp/up ]; then
 fi
 SCRIPT
 
+
 Vagrant.configure("2") do |config|
 
   device = ENV['VAGRANT_BRIDGE'] || 'eth0'
+  version = ENV['VERSION'] || '7.4.0'
 
   Dir['manifests/*'].map{|it| it.match(/manifests\/(\w*).pp/)[1]}.each do |type|
     config.vm.define type.to_sym do |node| 
-	node.vm.box = 'Debian-7.4.0-amd64'
+	node.vm.box = "Debian-#{version}-amd64"
 	node.vm.hostname = "#{type}.local"
 	node.vm.network :public_network, :bridge => device, :dev => device
 
@@ -28,7 +30,7 @@ Vagrant.configure("2") do |config|
 	  domain.host = "#{type}.local"
 	  domain.memory = 2048
 	  domain.cpus = 2
-	  domain.storage_pool_name = 'daemon'
+	  domain.storage_pool_name = 'default'
 	  o.vm.synced_folder './', '/vagrant', type: 'nfs'
 	end
 
