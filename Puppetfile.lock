@@ -60,9 +60,9 @@ GIT
 GIT
   remote: git://github.com/stankevich/puppet-python.git
   ref: master
-  sha: 95cbd246a0f73367dca33e71fd95e4c31463d3fd
+  sha: 9b1d26bba9b063193259033772a7b34eef349e3b
   specs:
-    stankevich-python (1.11.0)
+    stankevich-python (1.12.0)
       puppetlabs-stdlib (< 6.0.0, >= 4.6.0)
       stahnma-epel (< 2.0.0, >= 1.0.1)
 
