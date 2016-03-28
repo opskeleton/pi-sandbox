@@ -1,5 +1,5 @@
 node default {
-  include pi::profiles::tiny
+  include pi::profiles::remote
   include baseline::update
   include baseline::celestial
   include backup::rclone
