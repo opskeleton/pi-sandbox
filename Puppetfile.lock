@@ -45,7 +45,7 @@ GIT
 GIT
   remote: git://github.com/pulling-strings/puppet-pi.git
   ref: master
-  sha: 99b8c8a919f60ff9c43f5e9aa30dc8790c0b3fbf
+  sha: 6919cb131860867d40883a14df401628752ef287
   specs:
     strings-pi (0.1.0)
 

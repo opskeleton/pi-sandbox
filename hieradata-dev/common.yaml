@@ -12,3 +12,7 @@ baseline::ssh::keys:
 
 shell::user: 'vagrant'         
 shell::home: '/home/vagrant'
+
+pi::iptables::network: '192.168.121.0/24'
+pi::iptables::gateway: '192.168.121.1'
+pi::iptables::broadcast: '192.168.121.255'
