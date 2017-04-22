@@ -1,10 +1,10 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-update = <<SCRIPT
+update_deb = <<SCRIPT
 if [ ! -f /tmp/up ]; then
-  sudo sed -i.bak s/http.debian.net/debian.co.il/g /etc/apt/sources.list
-  sudo aptitude update 
+  sudo sed -i.bak s/http.debian.net/ftp.au.debian.org/g /etc/apt/sources.list
+  sudo apt update
   touch /tmp/up
 fi
 SCRIPT
@@ -13,17 +13,12 @@ SCRIPT
 Vagrant.configure("2") do |config|
 
   device = ENV['VAGRANT_BRIDGE'] || 'eth0'
-  version = ENV['VERSION'] || '7.4.0'
 
   Dir['manifests/*'].map{|it| it.match(/manifests\/(\w*).pp/)[1]}.each do |type|
-    config.vm.define type.to_sym do |node| 
-	node.vm.box = "Debian-#{version}-amd64"
+    config.vm.define type.to_sym do |node|
+	node.vm.box = "Debian-8.0.0-amd64"
 	node.vm.hostname = "#{type}.local"
 	node.vm.network :public_network, :bridge => device, :dev => device
-
-	node.vm.provider :virtualbox do |vb|
-	  vb.customize ['modifyvm', :id, '--memory', 2048, '--cpus', 2]
-	end
 
 	node.vm.provider :libvirt do |domain, o|
 	  domain.uri = 'qemu+unix:///system'
@@ -34,7 +29,7 @@ Vagrant.configure("2") do |config|
 	  o.vm.synced_folder './', '/vagrant', type: 'nfs'
 	end
 
-	node.vm.provision :shell, :inline => update
+	node.vm.provision :shell, :inline => update_deb
 	node.vm.provision :puppet do |puppet|
 	  puppet.manifests_path = 'manifests'
 	  puppet.manifest_file  = "#{type}.pp"

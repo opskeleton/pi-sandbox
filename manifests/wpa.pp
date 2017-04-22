@@ -1,5 +1,5 @@
 node default {
-  class{'pi::wpa':
+  class{'pi::wlan':
     ssid => 'yourssid',
     psk  => 'yourpsk'
   }
