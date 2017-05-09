@@ -23,7 +23,7 @@ GIT
 GIT
   remote: git://github.com/pulling-strings/puppet-backup.git
   ref: master
-  sha: 98fe82a50f7bb5e0c2cfd944d2b638cb63b9faf7
+  sha: b378b58da9dfa27fd54e17fcb5df9aff67a2b110
   specs:
     strings-backup (0.1.1)
       rodjek-logrotate (>= 1.1.1)
@@ -38,14 +38,14 @@ GIT
 GIT
   remote: git://github.com/pulling-strings/puppet-git.git
   ref: master
-  sha: 88f68eae13b941f49f5976e35205e44aae32ad2e
+  sha: 914192791c9547db7bf8b4f36bb9b1b18e15a477
   specs:
     strings-git (0.0.1)
 
 GIT
   remote: git://github.com/pulling-strings/puppet-pi.git
   ref: master
-  sha: 1c9364ff83fe727362330cd63221060be7dcce3e
+  sha: 42a66824c45254e62911dbeeed69a30bdad47ce9
   specs:
     strings-pi (0.1.0)
 
