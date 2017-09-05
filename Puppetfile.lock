@@ -1,7 +1,7 @@
 FORGE
   remote: https://forgeapi.puppetlabs.com
   specs:
-    puppetlabs-stdlib (4.16.0)
+    puppetlabs-stdlib (4.19.0)
     rodjek-logrotate (1.1.1)
     stahnma-epel (1.2.2)
       puppetlabs-stdlib (>= 3.0.0)
@@ -23,7 +23,7 @@ GIT
 GIT
   remote: git://github.com/pulling-strings/puppet-backup.git
   ref: master
-  sha: b378b58da9dfa27fd54e17fcb5df9aff67a2b110
+  sha: b97e8c7453409a2b4d9f8654745af31bd3eef5d2
   specs:
     strings-backup (0.1.1)
       rodjek-logrotate (>= 1.1.1)
@@ -31,7 +31,7 @@ GIT
 GIT
   remote: git://github.com/pulling-strings/puppet-baseline.git
   ref: master
-  sha: dbcda623c14b38d252ce65e02ce1493e31251acc
+  sha: 2e57e3a6da8d47e610b0382124e4656dc9673660
   specs:
     strings-baseline (0.0.1)
 
@@ -60,7 +60,7 @@ GIT
 GIT
   remote: git://github.com/stankevich/puppet-python.git
   ref: master
-  sha: 0a03cf20b95f8954e1782588c3821b099cbf7c12
+  sha: 718e9bc482f72559d9035ec2b8b651be01984128
   specs:
     stankevich-python (1.18.2)
       puppetlabs-stdlib (< 6.0.0, >= 4.6.0)
