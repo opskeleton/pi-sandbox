@@ -1,6 +1,11 @@
 FORGE
   remote: https://forgeapi.puppetlabs.com
   specs:
+    ULHPC-rclocal (0.1.6)
+      puppetlabs-concat (< 5.0.0, >= 4.0.0)
+      puppetlabs-stdlib (< 5.0.0, >= 4.2.2)
+    puppetlabs-concat (4.1.1)
+      puppetlabs-stdlib (< 5.0.0, >= 4.13.1)
     puppetlabs-stdlib (4.24.0)
     rodjek-logrotate (1.1.1)
     stahnma-epel (1.3.0)
@@ -45,7 +50,7 @@ GIT
 GIT
   remote: git://github.com/pulling-strings/puppet-pi.git
   ref: master
-  sha: be89a4da780e5f326f66d6d376d372716f95157c
+  sha: 4528be5eb7fbec541b485b85e16a9da26e880e94
   specs:
     strings-pi (0.1.0)
 
@@ -67,6 +72,7 @@ GIT
       stahnma-epel (< 2.0.0, >= 1.2.2)
 
 DEPENDENCIES
+  ULHPC-rclocal (>= 0)
   mstrauss-editfile (>= 0)
   puppetlabs-stdlib (>= 0)
   stankevich-python (>= 0)
