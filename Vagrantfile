@@ -5,7 +5,8 @@ update_deb = <<SCRIPT
 if [ ! -f /tmp/up ]; then
   sudo sed -i.bak s/http.debian.net/ftp.au.debian.org/g /etc/apt/sources.list
   sudo apt update
-  sudo apt install puppet -y
+  wget https://gist.githubusercontent.com/narkisr/6097786/raw/puppet-preqs.sh
+  sudo bash puppet-preqs.sh
   touch /tmp/up
 fi
 SCRIPT
