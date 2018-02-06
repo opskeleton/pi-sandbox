@@ -36,7 +36,7 @@ GIT
 GIT
   remote: git://github.com/pulling-strings/puppet-baseline.git
   ref: master
-  sha: 8b73980b2cee678f899358e8d593a52da0b80811
+  sha: fac11e20594d2583fe607909ecb72e75058d1a74
   specs:
     strings-baseline (0.0.1)
 
@@ -50,7 +50,7 @@ GIT
 GIT
   remote: git://github.com/pulling-strings/puppet-pi.git
   ref: master
-  sha: f6de8b0c7cdb3ed4ade6c6e6eca8ddf93436c177
+  sha: f4bd3a68f699043ac2b6e76a1f8c2184c96273b5
   specs:
     strings-pi (0.1.0)
 
