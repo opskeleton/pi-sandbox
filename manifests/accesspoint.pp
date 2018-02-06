@@ -1,4 +1,5 @@
 node default {
+  include baseline::upgrade
   include pi::hostapd
   include pi::nat
   include pi::ipv6
